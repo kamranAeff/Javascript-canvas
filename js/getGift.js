@@ -8,7 +8,7 @@ function docLoad() {
 function moveWithArrows() {
     let canvas = document.getElementById("canvas1");
     let context = canvas.getContext("2d"),
-      step = 50;
+      step = 35;
     let drawArea = context.contextSize();
     drawArea.x = Math.floor(drawArea.width / 2.0 / step % step) * step - step;
     drawArea.y = Math.floor(drawArea.height / 2.0 / step % step) * step - step;
@@ -23,9 +23,8 @@ function moveWithArrows() {
     context
       .clearCanvas()
       .drawGrid(step)
-      .drawStar(drawArea.gift.x+25, drawArea.gift.y+25, 5, 15, 8)
+      .drawStar(drawArea.gift.x+step/2, drawArea.gift.y+step/2, 5, step*0.6/2, step*0.32/2)
       .fillRect(drawArea.x, drawArea.y, step, step);
-      context.fillText(drawArea.gift.score,drawArea.gift.x+20,drawArea.gift.y+30, step);
       
 
 document.onkeydown=function(event) {
@@ -51,9 +50,8 @@ document.onkeydown=function(event) {
         context
           .clearCanvas()
           .drawGrid(step)
-          .drawStar(drawArea.gift.x+25, drawArea.gift.y+25, 5, 15, 8)
+          .drawStar(drawArea.gift.x+step/2, drawArea.gift.y+step/2, 5, step*0.6/2, step*0.32/2)
           .fillRect(drawArea.x, drawArea.y, step, step);
-          context.fillText(drawArea.gift.score,drawArea.gift.x+20,drawArea.gift.y+30, step);
         break;
       case 38:
         drawArea.y -= step;
@@ -76,9 +74,8 @@ document.onkeydown=function(event) {
         context
           .clearCanvas()
           .drawGrid(step)
-          .drawStar(drawArea.gift.x+25, drawArea.gift.y+25, 5, 15, 8)
+          .drawStar(drawArea.gift.x+step/2, drawArea.gift.y+step/2, 5, step*0.6/2, step*0.32/2)
           .fillRect(drawArea.x, drawArea.y, step, step);
-          context.fillText(drawArea.gift.score,drawArea.gift.x+20,drawArea.gift.y+30, step);
         break;
       case 39:
         drawArea.x += step;
@@ -101,9 +98,8 @@ document.onkeydown=function(event) {
         context
           .clearCanvas()
           .drawGrid(step)
-          .drawStar(drawArea.gift.x+25, drawArea.gift.y+25, 5, 15, 8)
+          .drawStar(drawArea.gift.x+step/2, drawArea.gift.y+step/2, 5, step*0.6/2, step*0.32/2)
           .fillRect(drawArea.x, drawArea.y, step, step);
-          context.fillText(drawArea.gift.score,drawArea.gift.x+20,drawArea.gift.y+30, step);
         break;
       case 40:
         drawArea.y += step;
@@ -126,9 +122,8 @@ document.onkeydown=function(event) {
         context
           .clearCanvas()
           .drawGrid(step)
-          .drawStar(drawArea.gift.x+25, drawArea.gift.y+25, 5, 15, 8)
+          .drawStar(drawArea.gift.x+step/2, drawArea.gift.y+step/2, 5, step*0.6/2, step*0.32/2)
           .fillRect(drawArea.x, drawArea.y, step, step);
-          context.fillText(drawArea.gift.score,drawArea.gift.x+20,drawArea.gift.y+28, step);
         break;
     }
 
@@ -183,7 +178,7 @@ function getRandInt(min, max) {
     this.fillStyle=fillStyle;
     return this;
   };
-  
+
   CanvasRenderingContext2D.prototype.drawStar = function(
     cx,
     cy,
