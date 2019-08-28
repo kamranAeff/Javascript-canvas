@@ -1,0 +1,18 @@
+#board {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 5%;
+}
+#scoreHeading {
+  text-align: center;
+  font-size: 40px;
+  color: #16a085;
+}
+#score {
+  padding: 5px 10px;
+  margin-left: 15px;
+  border: 1px solid #16a085;
+  color: #e67e22;
+  border-radius: 5px;
+}
