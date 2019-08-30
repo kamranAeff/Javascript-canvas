@@ -5,6 +5,7 @@
 - https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API
 - https://www.tutorialspoint.com/How-to-draw-a-star-by-using-canvas-HTML5
 - https://stackoverflow.com/questions/25837158/how-to-draw-a-star-by-using-canvas-html5
+- http://yazilim.cevapsitesi.com/EtiketMakalesi/canvas_32/40/canvas-cizgi-uclari-ve-cizgi-birlesimleri
 
 
 - https://flatuicolors.com/palette/defo
